@@ -1,0 +1,9 @@
+1. feladat:
+1 - tesztet írni hogy csak sztringet foadjon el
+2 - tesztelni hogy a függvény tömmbbel tér-e vissza
+3 - tesztelni a tömböt hogy az átalakítást megfelelően végzi-e
+
+2. feladat:
+4 - tömböt létrehozni \n szerint
+5 - 2 dimenzios tömböt létrehozni az előző tömbből
+6 - tesztelni a példákkal hogy jól működik-e a függvény

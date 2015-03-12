@@ -21,4 +21,16 @@ InputValidator.prototype.createArray = function(szoveg) {
 	var tomb = szoveg.split(" ");
 	return tomb;
 };
+InputValidator.prototype.createArray2 = function(szoveg) {
+	var tomb = szoveg.split(',');
+	return tomb;
+};
+InputValidator.prototype.createArrayByNL = function(szoveg) {
+	var tomb = szoveg.split("\n");
+	for(var i=0; i < tomb.length; i++) {
+		tomb[i] = this.createArray2(tomb[i]);
+	};
+	return tomb;
+};
+
 module.exports = InputValidator;
