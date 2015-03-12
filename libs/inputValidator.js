@@ -17,4 +17,8 @@ InputValidator.prototype.isString = function(szoveg) {
 		return false;
 	}
 };
+InputValidator.prototype.createArray = function(szoveg) {
+	var tomb = szoveg.split(" ");
+	return tomb;
+};
 module.exports = InputValidator;
