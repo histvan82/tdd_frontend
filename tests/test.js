@@ -1,16 +1,18 @@
 var assert = require('chai').assert,
-	sinon = require('sinon'),
-	testLib = require('../libs/test');
-suite('test project', function() {
+	InputValidator = require('../libs/inputValidator');
+suite('test input validator', function() {
 	setup(function() {
-		this.sandbox = sinon.sandbox.create();
-		this.clock = this.sandbox.useFakeTimers();
+		this.inputValidator = new InputValidator();
+		this.dataProvider = function() {
+			return {
+
+			};
+		};
 	});
-	test('test runs', function() {
-		testLib.test();
-		this.clock.tick(1000);
-		assert.strictEqual(testLib.a, 1);
-	});
-	teardown(function() {
+	test('only string allowed', function() {
+		var szoveg = "szoveg";
+		var szam = 33;
+		assert.strictEqual(this.inputValidator.isString(szoveg), true);
+		assert.notStrictEqual(this.inputValidator.isString(szam), true);
 	});
 });
